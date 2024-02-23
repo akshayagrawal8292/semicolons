@@ -1,0 +1,28 @@
+<div class="main-content">
+  <p class="header">PolicyWise</p>
+  <p class="sub-heading">Comparative Analysis Of Insurance Policy Document</p>
+  <p class="policy-select-header">Select two policies to compare:</p>
+
+  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around">
+    <div *ngFor="let card of cardList">
+      <mat-card
+        [class]="card.isSelected ? 'selected' : 'deselected'"
+        (click)="toggleSelection(card)"
+      >
+        <mat-card-content>
+          {{ card.cardDetails }}
+          <mat-icon
+            aria-hidden="false"
+            [class]="card.isSelected ? 'selected' : 'deselect-icon-color'"
+            class="icon-color"
+            fontIcon="open_in_new"
+            (click)="openFile(card.fileUrl)"
+          ></mat-icon>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <button mat-button class="compare-button" (click)="comparePolicies()">
+    <span style="color: white">Compare</span>
+  </button>
+</div>

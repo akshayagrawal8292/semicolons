@@ -4,7 +4,7 @@ import { MatDrawer } from '@angular/material/sidenav';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   @ViewChild(MatDrawer) matDrawer: MatDrawer | undefined;
@@ -53,6 +53,18 @@ constructor(){
           icon: 'people',
           color: '#ff7f0e',
           link: '/customers',
+        },
+        {
+          title: 'Policywise',
+          icon: 'policy',
+          link: '/policywise/selectPolicy',
+          color: '#ff7f0e',
+        },
+        {
+          title: 'Guru-app',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '/guru',
         },
       ],
     },

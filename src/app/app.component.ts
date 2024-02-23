@@ -39,9 +39,15 @@ export class AppComponent {
         },
         {
           title: 'Policywise',
-          icon: 'home',
+          icon: 'policy',
           link: '/policywise/selectPolicy',
           color: '#ff7f0e',
+        },
+        {
+          title: 'Guru-app',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '/guru',
         },
       ],
     },

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,13 +19,16 @@ import { HomeComponent } from './components/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
 import { PolicyWiseComponent } from './components/policy-wise/policy/policy-wise.component';
 import { CompareComponent } from './components/policy-wise/compare/compare.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { GuruUiService } from './services/guru-ui.service';
+import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     HomeComponent,
     PolicyWiseComponent,
     CompareComponent,
+    GuruAppComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,6 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    // RouterModule.forRoot(),
     MatProgressSpinnerModule,
     MatExpansionModule,
     MatMenuModule,
@@ -61,8 +63,10 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     FormsModule,
     MatFormFieldModule,
     MatAutocompleteModule,
+    MatSlideToggleModule,
+    RouterModule,
   ],
-  providers: [],
+  providers: [GuruUiService, HttpClient],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

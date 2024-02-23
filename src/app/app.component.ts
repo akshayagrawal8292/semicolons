@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'angular-semicolon';
@@ -36,6 +36,12 @@ export class AppComponent {
           icon: 'people',
           color: '#ff7f0e',
           link: '/customers',
+        },
+        {
+          title: 'Policywise',
+          icon: 'home',
+          link: '/policywise/selectPolicy',
+          color: '#ff7f0e',
         },
       ],
     },

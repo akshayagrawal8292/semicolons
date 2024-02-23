@@ -37,6 +37,12 @@ export class AppComponent {
           color: '#ff7f0e',
           link: '/customers',
         },
+        {
+          title: 'Guru-app',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '/guru',
+        },
       ],
     },
   ];

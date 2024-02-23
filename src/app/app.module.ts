@@ -13,17 +13,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { GuruUiService } from './services/guru-ui.service';
+import {MatInputModule} from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    GuruAppComponent
   ],
   imports: [
     BrowserModule,
@@ -35,12 +41,24 @@ import { HomeComponent } from './components/home/home.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    // RouterModule.forRoot(),
     MatProgressSpinnerModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule ,
+    HttpClientModule,
+    MatSlideToggleModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule
   ],
-  providers: [],
+  providers: [GuruUiService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

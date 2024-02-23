@@ -1,0 +1,148 @@
+<section class="main-section">
+  <div>
+    <div class="label">GURU(GenAI Utilized Resource Utility)</div>
+
+    <mat-toolbar>
+      <!-- First menu bar -->
+      <button mat-raised-button [matMenuTriggerFor]="menu" color="primary" (click)="csvMenuSelected()">CSV
+        files</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item type="button">
+          <mat-icon>description</mat-icon>
+          <span>Upload Your CSV</span>
+        </button>
+        <button mat-menu-item>
+          <span>Vehicle Insurance Demo</span>
+          <mat-icon>launch</mat-icon>
+        </button>
+      </mat-menu>
+
+      <!-- second menu bar -->
+      <button mat-raised-button [matMenuTriggerFor]="rdbms" color="primary" style="margin-left: 20px;"
+        (click)="rdbmsSelected()">RDBMS</button>
+      <mat-menu #rdbms="matMenu">
+        <button mat-menu-item (click)="abc()" type="button">
+          <mat-icon>storage</mat-icon>
+          <span>Upload Your DB CONFIG</span>
+        </button>
+      </mat-menu>
+      <!-- Third menu bar -->
+      <button mat-raised-button [matMenuTriggerFor]="pdf" color="primary" style="margin-left: 20px;"
+        (click)="pdfFileSelected()">PDFs</button>
+      <mat-menu #pdf="matMenu">
+        <button mat-menu-item (click)="abc()" type="button">
+          <mat-icon>picture_as_pdf</mat-icon>
+          <span>Upload Your PDF</span>
+        </button>
+        <button mat-menu-item>
+          <span>Upload Your Multiple PDFs</span>
+          <mat-icon>picture_as_pdf</mat-icon>
+        </button>
+      </mat-menu>
+
+    </mat-toolbar>
+
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened style="min-width: 29%;">
+        <section *ngIf="isCsvFilesSelected && !isRdbmsSelected && !isPdfSelected">
+          <mat-toolbar color="primary" class="toolbar">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+            <span class="example-spacer"></span>
+            <span>Contracts Database file</span>
+            <span class="example-spacer"></span>
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </mat-toolbar>
+
+          <mat-toolbar color="primary" class="toolbar">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+            <span class="example-spacer"></span>
+            <span>Loan Database File</span>
+            <span class="example-spacer"></span>
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </mat-toolbar>
+        </section>
+
+        <section *ngIf="!isCsvFilesSelected && isRdbmsSelected && !isPdfSelected">
+          <mat-toolbar color="primary" class="toolbar">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+            <span class="example-spacer"></span>
+            <span>Patients Snowflake Database</span>
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </mat-toolbar>
+
+          <mat-toolbar color="primary" class="toolbar">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+            <span class="example-spacer"></span>
+            <span>Contracts Snowflake Database</span>
+            <mat-icon class="delete-icon">delete</mat-icon>
+          </mat-toolbar>
+        </section>
+
+        <!-- pdf  -->
+        <section *ngIf="!isCsvFilesSelected && !isRdbmsSelected && isPdfSelected">
+          <ng-container *ngFor="let name of pdfDocumentList">
+            <mat-toolbar color="primary" class="toolbar">
+              <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>arrow_forward</mat-icon>
+              </button>
+              <span class="example-spacer"></span>
+              <span>{{name}}</span>
+              <mat-icon class="delete-icon">delete</mat-icon>
+
+            </mat-toolbar>
+          </ng-container>
+
+        </section>
+      </mat-drawer>
+
+      <mat-drawer-content>
+        <section class="main-drawer">
+          <div style="height: 59vh;">
+            <mat-toolbar class="ask-question">
+              <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon>question_answer</mat-icon>
+              </button>
+              <span class="example-spacer"></span>
+              <span class="ask-label">Ask a question to get started </span>
+            </mat-toolbar>
+
+            <section *ngIf="inputAdded" class="prompt">
+                <div class="question-row">
+                  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon class="person">person</mat-icon>
+            
+                  </button>
+                  <div class="question-label">
+                    {{question}}</div>
+                </div>
+            
+                <div class="prompt-answer" *ngIf="!showLoader">
+                  {{promptAnswers}}
+                </div>
+
+                <div class="loader" *ngIf="showLoader"></div>
+
+            
+            </section>
+          </div>
+
+
+          <form class="example-form" [formGroup]="myForm">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Type Something..." (keyup.enter)="getInput()" formControlName="deposit">
+              <mat-icon matSuffix>send</mat-icon>
+            </mat-form-field>
+          </form>
+        </section>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+</section>

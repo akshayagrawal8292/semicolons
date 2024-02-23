@@ -115,22 +115,20 @@
             </mat-toolbar>
 
             <section *ngIf="inputAdded" class="prompt">
-                <div class="question-row">
-                  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-                    <mat-icon class="person">person</mat-icon>
-            
-                  </button>
-                  <div class="question-label">
-                    {{question}}</div>
-                </div>
-            
-                <div class="prompt-answer" *ngIf="!showLoader">
-                  {{promptAnswers}}
-                </div>
+              <div class="question-row">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                  <mat-icon class="person">person</mat-icon>
 
-                <div class="loader" *ngIf="showLoader"></div>
+                </button>
+                <div class="question-label">
+                  {{question}}</div>
+              </div>
 
-            
+              <div class="prompt-answer" *ngIf="!showLoader">
+                {{promptAnswers}}
+              </div>
+
+              <div class="loader" *ngIf="showLoader"></div>
             </section>
           </div>
 

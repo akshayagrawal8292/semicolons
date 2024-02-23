@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -6,12 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild(MatDrawer) matDrawer: MatDrawer | undefined;
+
   title = 'angular-semicolon';
-  opened = true;
+  opened = false;
 
   toggle(): void {
-    this.opened = !this.opened;
+    if(this.matDrawer?.opened)
+    {
+      this.matDrawer?.close()
+      this.opened=false
+    }else
+    {
+      this.opened =true;
+      this.matDrawer?.open()
+    }
+   
+    
   }
+
+constructor(){
+ 
+}
 
   menu: any = [
     {

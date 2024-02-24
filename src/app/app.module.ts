@@ -35,6 +35,7 @@ import { EmailComponent } from './components/atlas/email/email.component';
 import {DialogModule} from '@angular/cdk/dialog';
 import {MatDialogModule} from '@angular/material/dialog'
 import { SubjectModelComponent } from './subject-model/subject-model.component';
+import { PendingComponent } from './pending/pending.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { SubjectModelComponent } from './subject-model/subject-model.component';
     ClaimOverviewComponent,
     EmailComponent,
     SubjectModelComponent,
+    PendingComponent,
   ],
   imports: [
     BrowserModule,

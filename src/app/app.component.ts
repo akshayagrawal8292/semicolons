@@ -54,13 +54,13 @@ export class AppComponent {
         title: 'ClaimPlus',
         icon: 'policy',
         color: '#ff7f0e',
-        link: '',
+        link: '/progress',
       },
       {
         title: 'BrokersBot',
         icon: 'policy',
         color: '#ff7f0e',
-        link: '',
+        link: '/progress',
       },
     ];
   }

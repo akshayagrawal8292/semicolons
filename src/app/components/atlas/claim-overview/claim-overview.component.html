@@ -1,1 +1,60 @@
-<p>claim-overview works!</p>
+<div class="container">
+  <div class="claim-no">Claim Details: {{ claimNo }}</div>
+  <div class="card-section">
+    <mat-card class="card">
+      <mat-card-content>
+        <div class="card-details">
+          <tr>
+            <td>
+              <mat-icon aria-hidden="false" fontIcon="badge"></mat-icon>
+            </td>
+            <td>
+              <span class="claim-details"> Name:John Doe</span>
+            </td>
+          </tr>
+        </div>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="mail"></mat-icon>
+          <span class="claim-details"> Email Id: john_doe@claim.com</span>
+        </div>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="phone"></mat-icon>
+          <span class="claim-details"> Phone No:+18332405104</span>
+        </div>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="home"></mat-icon>
+          <span class="claim-details">
+            Address: Metrotech Center, Brooklyn, NY 11201, USA</span
+          >
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card class="card">
+      <mat-card-content>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="policy"></mat-icon>
+          <span class="claim-details"> Policy Id: 523-313-190</span>
+        </div>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="calendar_month"></mat-icon>
+          <span class="claim-details"> Claim Date: 07/07/2021</span>
+        </div>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="library_books"></mat-icon>
+          <span class="claim-details"> Policy Type:Property and Casualty</span>
+        </div>
+        <div class="card-details">
+          <mat-icon aria-hidden="false" fontIcon="description"></mat-icon>
+          <span class="claim-details">
+            Claim Description: Damage to Property due to Leakage</span
+          >
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div style="text-align: center">
+    <button mat-button class="action">
+      <span style="color: white">Send Email</span>
+    </button>
+  </div>
+</div>

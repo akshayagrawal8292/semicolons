@@ -3,7 +3,7 @@
   <p class="sub-heading">Comparative Analysis Of Insurance Policy Document</p>
   <p class="policy-select-header">Select two policies to compare:</p>
 
-  <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around">
+  <div style="margin-top: 60px;" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-around">
     <div *ngFor="let card of cardList">
       <mat-card
         [class]="card.isSelected ? 'selected' : 'deselected'"
@@ -22,7 +22,11 @@
       </mat-card>
     </div>
   </div>
-  <button mat-button class="compare-button" (click)="comparePolicies()">
-    <span style="color: white">Compare</span>
-  </button>
+  <div style="  width: 100%;
+  text-align: center;margin-top: 80px;">
+    <button mat-button class="compare-button" (click)="comparePolicies()">
+      <span style="color: white">Compare</span>
+    </button>
+  </div>
+  
 </div>

@@ -25,7 +25,7 @@
 .compare-button {
   display: inline-flex;
   justify-content: center;
-  margin: 56px 250px 0px;
+ 
   cursor: pointer;
   font-family: Poppins, sans-serif;
   font-weight: 500;
@@ -60,7 +60,8 @@
   font-family: Diphylleia;
   color: rgb(253, 95, 7);
   margin: 5px auto;
-  padding-left: 400px;
+  width: 100%;
+  text-align: center;
 }
 
 .sub-heading {
@@ -68,14 +69,15 @@
   line-height: 1.5;
   font-size: 23px;
   font-family: Diphylleia;
-  margin: 0px auto;
-  padding-left: 278px;
+  width: 100%;
+  text-align: center;
 }
 
 .policy-select-header {
-  margin: 120px 36px 24px;
   font-family: Poppins, sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
+  width: 100%;
+  text-align: center;
 }

@@ -11,7 +11,7 @@ export class AppComponent {
 
   title = 'angular-semicolon';
   opened = false;
-  userSelected: string = '';
+  userSelected: string = 'Broker';
 
   toggle(): void {
     if (this.matDrawer?.opened) {
@@ -23,14 +23,98 @@ export class AppComponent {
     }
   }
 
-  constructor() {}
+  constructor() {
+    this.menu = [
+      {
+        title: 'Home',
+        icon: 'home',
+        link: '/home',
+        color: '#ff7f0e',
+      },
+      {
+        title: 'Policywise',
+        icon: 'policy',
+        link: '/policywise/selectPolicy',
+        color: '#ff7f0e',
+      },
+      {
+        title: 'Guru-app',
+        icon: 'people',
+        color: '#ff7f0e',
+        link: '',
+      },
+      {
+        title: 'Swift-claim',
+        icon: 'people',
+        color: '#ff7f0e',
+        link: '',
+      },
+      {
+        title: 'Atlas',
+        icon: 'people',
+        color: '#ff7f0e',
+        link: '',
+      },
+      {
+        title: 'Email-Gen',
+        icon: 'people',
+        color: '#ff7f0e',
+        link: '',
+      },
+    ];
+  }
 
-  menu: any = [
-    {
-      title: 'Home',
-      icon: 'home',
-      color: '#ff7f0e',
-      subMenu: [
+  menu: any = [];
+
+  selectedUser(user: any) {
+    this.userSelected = user;
+    if (this.userSelected === 'broker') {
+      this.menu = [
+        {
+          title: 'Home',
+          icon: 'home',
+          link: '/home',
+          color: '#ff7f0e',
+        },
+        {
+          title: 'Policywise',
+          icon: 'policy',
+          link: '/policywise/selectPolicy',
+          color: '#ff7f0e',
+        },
+        {
+          title: 'Guru-app',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '',
+        },
+        {
+          title: 'Swift-claim',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '',
+        },
+        {
+          title: 'Atlas',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '',
+        },
+        {
+          title: 'Email-Gen',
+          icon: 'people',
+          color: '#ff7f0e',
+          link: '',
+        },
+      ];
+    } else if (this.userSelected === 'client') {
+      this.menu = [
+        {
+          title: 'Home',
+          icon: 'home',
+          link: '/home',
+          color: '#ff7f0e',
+        },
         {
           title: 'Policywise',
           icon: 'policy',
@@ -60,91 +144,6 @@ export class AppComponent {
           icon: 'people',
           color: '#ff7f0e',
           link: '/guru',
-        },
-      ],
-    },
-  ];
-
-  selectedUser(user: any) {
-    this.userSelected = user;
-    if (this.userSelected === 'broker') {
-      this.menu = [
-        {
-          title: 'Home',
-          icon: 'home',
-          color: '#ff7f0e',
-          subMenu: [
-            {
-              title: 'Policywise',
-              icon: 'policy',
-              link: '/policywise/selectPolicy',
-              color: '#ff7f0e',
-            },
-            {
-              title: 'Guru-app',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-            {
-              title: 'Swift-claim',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-            {
-              title: 'Atlas',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-            {
-              title: 'Email-Gen',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-          ],
-        },
-      ];
-    } else if (this.userSelected === 'client') {
-      this.menu = [
-        {
-          title: 'Home',
-          icon: 'home',
-          color: '#ff7f0e',
-          subMenu: [
-            {
-              title: 'Policywise',
-              icon: 'policy',
-              link: '/policywise/selectPolicy',
-              color: '#ff7f0e',
-            },
-            {
-              title: 'Guru-app',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-            {
-              title: 'Swift-claim',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-            {
-              title: 'Atlas',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-            {
-              title: 'Email-Gen',
-              icon: 'people',
-              color: '#ff7f0e',
-              link: '/guru',
-            },
-          ],
         },
       ];
     }

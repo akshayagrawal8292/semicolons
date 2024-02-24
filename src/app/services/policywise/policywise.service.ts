@@ -22,4 +22,19 @@ export class PolicywiseService {
       httpOptions
     );
   }
+
+  getEmail(data: any): Observable<any> {
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Cache-Control': 'no-cache',
+      }),
+    };
+
+    return this.http.post(
+      'https://presales-guru-backend.lemonfield-bd85b07d.eastus2.azurecontainerapps.io/api/chat_for_email_crawford',
+      data,
+      httpOptions
+    );
+  }
 }

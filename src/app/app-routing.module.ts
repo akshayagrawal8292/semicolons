@@ -6,6 +6,7 @@ import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.compon
 import { HomeComponent } from './components/home/home.component';
 import { CompareComponent } from './components/policy-wise/compare/compare.component';
 import { PolicyWiseComponent } from './components/policy-wise/policy/policy-wise.component';
+import { EmailComponent } from './components/atlas/email/email.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,6 +18,11 @@ const routes: Routes = [
   {
     path: 'guru',
     component: GuruAppComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'email',
+    component: EmailComponent,
     pathMatch: 'full',
   },
   {

@@ -1,0 +1,27 @@
+<div style="background-color: white;padding: 15px;width: 135%;">
+    <p style="font-size: 16px;">Enter Subject for E-Mail</p>
+    <div class="search-container send-container">
+        <mat-form-field class="full-width">
+          <input
+            matInput
+            placeholder="Enter Subject"
+            [matAutocomplete]="auto"
+            [(ngModel)]="searchQuery"
+            (key.enter)="getInput()"
+          />
+        </mat-form-field>
+        <div class="send" (click)="getInput()">
+          <mat-icon matSuffix class="send-container">send</mat-icon>
+        </div>
+
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option
+            *ngFor="let suggestion of suggestions"
+            [value]="suggestion"
+          >
+            {{ suggestion }}
+          </mat-option>
+        </mat-autocomplete>
+      </div>
+</div>
+

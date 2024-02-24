@@ -15,7 +15,7 @@
             <mat-icon class="icon"  mat-list-icon>
              send
               </mat-icon>
-              <span mat-line  class="list-item">Subject: <span> <b>Inspection Visit Request for Claim Settlement</b></span></span>
+              <span mat-line  class="list-item">Subject: <span> <b contenteditable="true" >{{sub}}</b></span></span>
             </mat-panel-title>
         </mat-list>
         <hr>
@@ -34,11 +34,18 @@
                          </mat-icon> </span>
             </mat-panel-title>
         </mat-list>
-        <div>
-            <textarea rows="26" cols="148" matNativeControl>
-                </textarea>
+        <div style="border: 1px solid black;padding: 5px;" [innerHTML]="emailBody" contenteditable="true">
+            <!-- <textarea [(ngModel)]="emailBody" rows="26" cols="148" matNativeControl>
+                </textarea> -->
+                {{emailBody}}
         </div>
      </div>
     </mat-card-content>
+
+    <div style="text-align: center;margin-top: 15px;">
+        <button  mat-button class="action">
+          <span style="color: white">Send Email</span>
+        </button>
+      </div>
   </mat-card>
 

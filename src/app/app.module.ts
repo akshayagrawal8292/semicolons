@@ -32,7 +32,9 @@ import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.compon
 import { ClaimListComponent } from './components/atlas/claim-list/claim-list.component';
 import { ClaimOverviewComponent } from './components/atlas/claim-overview/claim-overview.component';
 import { EmailComponent } from './components/atlas/email/email.component';
-
+import {DialogModule} from '@angular/cdk/dialog';
+import {MatDialogModule} from '@angular/material/dialog'
+import { SubjectModelComponent } from './subject-model/subject-model.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +47,7 @@ import { EmailComponent } from './components/atlas/email/email.component';
     ClaimListComponent,
     ClaimOverviewComponent,
     EmailComponent,
+    SubjectModelComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +74,9 @@ import { EmailComponent } from './components/atlas/email/email.component';
     MatAutocompleteModule,
     MatSlideToggleModule,
     RouterModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DialogModule,
+    MatDialogModule
   ],
   providers: [GuruUiService, HttpClient],
   bootstrap: [AppComponent],

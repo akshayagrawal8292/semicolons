@@ -82,7 +82,7 @@ export class CompareComponent {
         question: '',
         answer: '',
       },
-      user_email: 'mohini_komawar@persistent.com',
+      user_email: 'mahantesh_patne@persistent.com',
     };
 
     this.policywiseService.getDetails(details).subscribe((res: any) => {

@@ -2,7 +2,15 @@
   <button (click)="menuToggled.emit()" mat-icon-button>
     <mat-icon class="title">menu</mat-icon>
   </button>
-  <span class="title" routerLink="/">BIMA-MITRA</span>
+  <span routerLink="/" style="color: white;"><img
+    mat-card-image
+    style=" height: 33px;
+    border-radius: 20px;
+    margin-bottom: -9px;"
+    src="/assets/images/BIMA_orange 2.jpg"
+    alt="Photo of a Shiba Inu"
+  />
+  BIMA-MITRA</span>
   <span class="spacer"></span>
   <span class="welcome-text">Hello {{user}}</span>
   <button mat-icon-button [matMenuTriggerFor]="menu">

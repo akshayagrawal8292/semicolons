@@ -56,7 +56,7 @@ export class AppComponent {
         link: 'atlas/claimList',
       },
       {
-        title: 'Email-Gen',
+        title: 'Nova',
         icon: 'people',
         color: '#ff7f0e',
         link: '',

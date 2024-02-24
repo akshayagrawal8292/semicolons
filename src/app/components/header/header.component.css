@@ -1,11 +1,17 @@
 .spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
-  .title {
-    cursor: pointer;
-  }
+.title {
+  cursor: pointer;
+  color: white;
+}
 
-  .welcome-text {
-    font-size: smaller;
-  }
+.header {
+  background-color: rgb(268, 121, 26);
+}
+
+.welcome-text {
+  font-size: smaller;
+  color: white;
+}

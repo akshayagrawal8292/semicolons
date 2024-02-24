@@ -11,7 +11,7 @@ export class AppComponent {
 
   title = 'angular-semicolon';
   opened = false;
-  userSelected: string = 'Broker';
+  userSelected: string = 'Ram';
 
   toggle(): void {
     if (this.matDrawer?.opened) {
@@ -32,32 +32,33 @@ export class AppComponent {
         color: '#ff7f0e',
       },
       {
-        title: 'Policywise',
+        title: 'PolicyPanorama',
         icon: 'policy',
         link: '/policywise/selectPolicy',
         color: '#ff7f0e',
       },
       {
-        title: 'Guru-app',
-        icon: 'people',
-        color: '#ff7f0e',
-        link: '',
-      },
-      {
-        title: 'Swift-claim',
-        icon: 'people',
-        color: '#ff7f0e',
-        link: '',
-      },
-      {
-        title: 'Atlas',
-        icon: 'people',
+        title: 'InsuraInbox',
+        icon: 'policy',
         color: '#ff7f0e',
         link: 'atlas/claimList',
       },
       {
-        title: 'Nova',
-        icon: 'people',
+        title: 'Converse',
+        icon: 'policy',
+        color: '#ff7f0e',
+        link: '/guru',
+      },
+      
+      {
+        title: 'ClaimPlus',
+        icon: 'policy',
+        color: '#ff7f0e',
+        link: '',
+      },
+      {
+        title: 'BrokersBot',
+        icon: 'policy',
         color: '#ff7f0e',
         link: '',
       },

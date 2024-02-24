@@ -31,6 +31,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.component';
 import { ClaimListComponent } from './components/atlas/claim-list/claim-list.component';
 import { ClaimOverviewComponent } from './components/atlas/claim-overview/claim-overview.component';
+import { EmailComponent } from './components/atlas/email/email.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ClaimOverviewComponent } from './components/atlas/claim-overview/claim-
     GuruAppComponent,
     ClaimListComponent,
     ClaimOverviewComponent,
+    EmailComponent,
   ],
   imports: [
     BrowserModule,

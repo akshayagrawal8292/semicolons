@@ -9,8 +9,8 @@
     <mat-icon class="title">person_pin</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <span>Logout</span>
-    </button>
+    <button mat-menu-item (click)="menuClick('broker')">Broker</button>
+    <button mat-menu-item (click)="menuClick('client')">Client</button>
+    <button mat-menu-item (click)="menuClick('logout')">Logout</button>
   </mat-menu>
 </mat-toolbar>

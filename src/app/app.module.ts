@@ -29,6 +29,8 @@ import { GuruUiService } from './services/guru-ui.service';
 import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.component';
+import { ClaimListComponent } from './components/atlas/claim-list/claim-list.component';
+import { ClaimOverviewComponent } from './components/atlas/claim-overview/claim-overview.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.compon
     PolicyWiseComponent,
     CompareComponent,
     GuruAppComponent,
+    ClaimListComponent,
+    ClaimOverviewComponent,
   ],
   imports: [
     BrowserModule,

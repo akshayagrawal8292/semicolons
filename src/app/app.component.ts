@@ -53,7 +53,7 @@ export class AppComponent {
           title: 'Atlas',
           icon: 'people',
           color: '#ff7f0e',
-          link: '/guru',
+          link: '/atlas/claimList',
         },
         {
           title: 'Email-Gen',

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ClaimListComponent } from './components/atlas/claim-list/claim-list.component';
+import { ClaimOverviewComponent } from './components/atlas/claim-overview/claim-overview.component';
 import { GuruAppComponent } from './components/guru-app/guru-app/guru-app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CompareComponent } from './components/policy-wise/compare/compare.component';
@@ -27,6 +29,19 @@ const routes: Routes = [
       {
         path: 'compare',
         component: CompareComponent,
+      },
+    ],
+  },
+  {
+    path: 'atlas',
+    children: [
+      {
+        path: 'claimList',
+        component: ClaimListComponent,
+      },
+      {
+        path: 'claimOverview/:id',
+        component: ClaimOverviewComponent,
       },
     ],
   },
